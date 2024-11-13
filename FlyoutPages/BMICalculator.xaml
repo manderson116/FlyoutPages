@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FlyoutPages.BMICalculator"
+             Title="BMICalculator">
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            
+            <Image
+                Source="scale.png"
+                HeightRequest="185"
+                Aspect="AspectFit"
+                SemanticProperties.Description="A scale used for weighing people" />
+
+            <Label
+                Text="BMI Calculator"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+
+            <!--Using Entry controllers instead of Editor controllers since these only allow 1 line.-->
+            <Entry
+                x:Name="EnterHeight"
+                Placeholder="Enter height (inches)"
+                PlaceholderColor="Green"
+                SemanticProperties.Description="Enter your height in inches" />
+            <Entry
+                x:Name="EnterWeight"
+                Placeholder="Enter weight (pounds)"
+                PlaceholderColor="Green"
+                SemanticProperties.Description="Enter your weight in pounds" />
+
+            <Button
+                x:Name="CalcBtn"
+                Text="Calculate!" 
+                SemanticProperties.Hint="Calculate your BMI"
+                Clicked="OnCalcClicked"
+                HorizontalOptions="Fill" />
+
+            <Label
+                x:Name="BMILabel"
+                Text="Awaiting calculation..."
+                Style="{StaticResource SubHeadline}"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Your B M I will be displayed here" />
+            <Label
+                x:Name="JudgeLabel"
+                Text=""
+                Style="{StaticResource SubHeadline}"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="You will be judged here" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

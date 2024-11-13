@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FlyoutPages.MorseTap"
+             Title="MorseTap">
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25"
+            VerticalOptions="FillAndExpand">
+
+            <Label
+                Text="Morse Tapper"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+
+            <Grid
+                HorizontalOptions="Fill"
+                VerticalOptions="End" >
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="90"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="63"/>
+                    <RowDefinition Height="42"/>
+                    <RowDefinition Height="42"/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <Label
+                    Grid.ColumnSpan="2"
+                    Grid.Row="0"
+                    x:Name="MorseMessageLabel1"
+                    Text="Tap message..."
+                    BackgroundColor="White"
+                    TextColor="Black"
+                    VerticalTextAlignment="End"
+                    Padding="5"
+                    HorizontalOptions="Fill" />
+
+                <Label
+                    Grid.ColumnSpan="2"
+                    Grid.Row="1"
+                    x:Name="MorseCharacterLabel1"
+                    Text="Tap character..."
+                    BackgroundColor="LightGray"
+                    TextColor="Black"
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"
+                    Padding="5"
+                    HorizontalOptions="Fill" />
+
+                <Button
+                    Grid.Column="0"
+                    Grid.Row="2"
+                    x:Name="DotBtn1"
+                    Text=". Dot"
+                    Clicked="OnDotBtn1Clicked"
+                    HorizontalOptions="Fill"
+                    Margin="2" />
+
+                <Button
+                    Grid.Column="1"
+                    Grid.Row="2"
+                    x:Name="DashBtn1"
+                    Text="- Dash"
+                    Clicked="OnDashBtn1Clicked"
+                    HorizontalOptions="Fill"
+                    Margin="2" />
+
+                <Button
+                    Grid.ColumnSpan="2"
+                    Grid.Row="3"
+                    x:Name="SpaceBtn1"
+                    Text="[ ] Space"
+                    Clicked="OnSpaceBtn1Clicked"
+                    HorizontalOptions="Fill"
+                    Margin="2" />
+
+                <Button
+                    Grid.ColumnSpan="2"
+                    Grid.Row="4"
+                    x:Name="BackBtn1"
+                    Text="&lt; Backspace"
+                    Clicked="OnBackBtn1Clicked"
+                    HorizontalOptions="Fill"
+                    Margin="2" />
+            </Grid>
+
+            <Line
+                Stroke="LightGray"
+                HorizontalOptions="Center"
+                X2="300" />
+
+            <Grid
+                HorizontalOptions="Fill"
+                VerticalOptions="End" >
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="90"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="63"/>
+                    <RowDefinition Height="42"/>
+                    <RowDefinition Height="42"/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <Label
+                    Grid.ColumnSpan="2"
+                    Grid.Row="0"
+                    x:Name="MorseMessageLabel2"
+                    Text="Tap message..."
+                    BackgroundColor="White"
+                    TextColor="Black"
+                    VerticalTextAlignment="End"
+                    Padding="5"
+                    HorizontalOptions="Fill" />
+
+                <Label
+                    Grid.ColumnSpan="2"
+                    Grid.Row="1"
+                    x:Name="MorseCharacterLabel2"
+                    Text="Tap character..."
+                    BackgroundColor="LightGray"
+                    TextColor="Black"
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"
+                    Padding="5"
+                    HorizontalOptions="Fill" />
+
+                <Button
+                    Grid.Column="0"
+                    Grid.Row="2"
+                    x:Name="DotBtn2"
+                    Text=". Dot"
+                    BackgroundColor="LightGreen"
+                    Clicked="OnDotBtn2Clicked"
+                    HorizontalOptions="Fill"
+                    Margin="2" />
+
+                <Button
+                    Grid.Column="1"
+                    Grid.Row="2"
+                    x:Name="DashBtn2"
+                    Text="- Dash"
+                    BackgroundColor="LightGreen"
+                    Clicked="OnDashBtn2Clicked"
+                    HorizontalOptions="Fill"
+                    Margin="2" />
+
+                <Button
+                    Grid.ColumnSpan="2"
+                    Grid.Row="3"
+                    x:Name="SpaceBtn2"
+                    Text="[ ] Space"
+                    BackgroundColor="LightGreen"
+                    Clicked="OnSpaceBtn2Clicked"
+                    HorizontalOptions="Fill"
+                    Margin="2" />
+
+                <Button
+                    Grid.ColumnSpan="2"
+                    Grid.Row="4"
+                    x:Name="BackBtn2"
+                    Text="&lt; Backspace"
+                    BackgroundColor="LightGreen"
+                    Clicked="OnBackBtn2Clicked"
+                    HorizontalOptions="Fill"
+                    Margin="2" />
+            </Grid>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
